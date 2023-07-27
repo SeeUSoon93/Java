@@ -1,0 +1,21 @@
+package ex0621;
+
+public class Ex06산술연산자1 {
+
+	public static void main(String[] args) {
+		
+		int num1 = 7;
+		int num2 = 3;
+		
+		// 출력문을 사용해서 num1과 num2의 +, -, *, /, %
+		
+		System.out.println(num1 + num2);
+		
+		
+		
+		
+		
+
+	}
+
+}

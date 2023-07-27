@@ -1,0 +1,8 @@
+		Scanner sc = new Scanner(System.in);
+		System.out.print("USER 1 : ");
+		String user1 = sc.next(); 
+		System.out.print("USER 2 : ");
+		String user2 = sc.next();
+		
+		System.out.print(user1 + "ดิ >> ");
+		String rsp1 = sc.next(); 

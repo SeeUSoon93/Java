@@ -1,0 +1,38 @@
+package controller;
+
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Image;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+ImagePanel pnMiddle = new ImagePanel(new ImageIcon(".\\img\\0.jpg").getImage()); // 이미지 넣기
+pnMiddle.setBounds(0,90,501,379);
+
+getContentPane().add(pnMiddle);
+pnMiddle.setLayout(null);
+
+
+public class EndingController extends JFrame {
+
+    
+    
+    
+//패널에 그림을 올려주는 클래스
+class ImagePanel extends JPanel {
+private Image img;
+
+public ImagePanel(Image img) {
+  this.img = img;
+  setSize(new Dimension(img.getWidth(null), img.getHeight(null)));
+  setPreferredSize(new Dimension(img.getWidth(null), img.getHeight(null)));
+  setLayout(null);
+}
+
+public void paintComponent(Graphics g) {
+  g.drawImage(img, 3, 0, null);
+}
+}
+
+}

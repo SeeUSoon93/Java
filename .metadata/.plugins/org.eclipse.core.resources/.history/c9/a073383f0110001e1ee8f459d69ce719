@@ -1,0 +1,36 @@
+package ex0621;
+
+public class Ex05형변환2 {
+
+	public static void main(String[] args) {
+		
+		// 정수형 : byte, int
+		
+		byte num1 = 3;
+		int num2 = 8000;
+		
+		num1 = (byte)num2;
+		System.out.println(num1);
+		//값이 양의 방향으로 넘어가는 현상 : overflow
+		
+		int num3 = -129;
+		num1 = (byte)num3;
+		System.out.println(num1);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

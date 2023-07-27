@@ -1,0 +1,39 @@
+package controller;
+
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class EndingController extends JFrame {
+
+	public EndingController() {
+		    
+		        JLabel imgLabel = new JLabel();
+		        
+		        ImageIcon icon = new ImageIcon(
+		        		EndingController.class.getResource(".\\img\\0.jpg")
+		        );
+		        
+		        Image img = icon.getImage();
+		    	Image updateImg = img.getScaledInstance(165, 100, Image.SCALE_SMOOTH);
+		        ImageIcon updateIcon = new ImageIcon(updateImg);
+		        
+		        imgLabel.setIcon(updateIcon);
+		        
+		        imgLabel.setBounds(210, 30, 165, 150);
+		        imgLabel.setHorizontalAlignment(JLabel.CENTER);
+				
+		    	getContentPane().add(imgLabel);
+		    	
+		        setVisible(true);
+		        
+		    }
+		    
+	}
+}

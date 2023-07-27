@@ -1,0 +1,31 @@
+package ex0621;
+
+public class Ex03자료형 {
+
+	public static void main(String[] args) {
+		
+		// 줄 이동 : Alt + 방향키(위, 아래)
+		// 줄 복사 : Ctrl + Art + 방향키(위,아래)
+		// 줄 삭제 : Ctrl + D
+		
+		// 변수 선언 -> 자료형 변수명 = 데이터;
+		
+		// 1. 논리형
+		// boolean : 1bit or 1byte (1 or 0)
+		// 참 혹은 거짓(true or false)
+		boolean isHot = false; // true
+		System.out.println(isHot);
+		
+		// 2. 문자형
+		// char : 2byte -> 2^16 -> 65536
+		char grade = 'A';
+		char num = '4';
+		char slash = '\''; 
+		
+		
+		
+		
+
+	}
+
+}

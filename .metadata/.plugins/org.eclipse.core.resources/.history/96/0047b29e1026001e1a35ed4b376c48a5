@@ -1,0 +1,106 @@
+package controller;
+
+import java.awt.Dimension;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+// JFrame을 상속받는 EndingController 클래스
+public class EndingController extends JFrame {
+	// 이건 이클립스 경고 메세지를 없애기 위한 버전
+//	private static final long serialVersionUID = 1L;
+//	// 이미지를 저장할 apple과 가로 길이의 w, 세로 길이의 h
+//	private Image apple;
+//	private int w;
+//	private int h;
+//
+//	public EndingController(String url) {
+//		super("엔딩");
+//		// 이미지 아이콘을 생성한다.
+//		ImageIcon appleIcon = new ImageIcon(url);
+//		// 이미지 아이콘에서 가로 길이를 얻어온다.
+//		w = appleIcon.getIconWidth();
+//		// 이밎 아이콘에서 세로 길이를 얻어온다.
+//		h = appleIcon.getIconHeight();
+//		// 이미지 아이콘에서 이미지를 얻어온다.
+//		apple = appleIcon.getImage();
+//		// 컨테이너 c에 ContentPane을 얻어와서 담는다.
+//		// JFrame은 여러개의 Pane구조로 되어있다. 콘텐츠는 ContentPane에 담는다.
+//		Container c = this.getContentPane();
+//		// JPanel을 상속받은 ImagePanel을 생성한다.
+//		JPanel p = new ImagePanel();
+//
+//		// 익명 이너클래스 형태로 키리스너를 구현해준다.
+//		// KeyListener를 상속받게 되면 3개의 추상메소드를 모두 오버라이드 해야한다.
+//		// 하지만 익명 이너클래스인 KeyAdapter를 상속받으면 1개만 구현해도 OK
+//		c.add(p);
+//		// 프레임의 X 버튼을 눌렀을 때 종료 이벤트
+//		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		// 사이즈는 300 x 300으로
+//		this.setSize(650, 450);
+//		// 보여지기 여부 true
+//		this.setVisible(true);
+//		// 프레임이 띄어지자 마자 ImagePanel에 포커스를 준다.
+//		p.requestFocus();
+//		
+//		Dimension frameSize = getSize();
+//		 
+//        Dimension windowSize = Toolkit.getDefaultToolkit().getScreenSize();
+//		p.requestFocus();
+//		setLocation((windowSize.width - frameSize.width) / 2,
+//                (windowSize.height - frameSize.height) / 2);
+//	}
+//	
+//
+//	// 이너클래스 형태로 ImagePanel을 선언했다.
+//	class ImagePanel extends JPanel {
+//		// 이건 이클립스 경고 메세지를 없애기 위한 버전
+//		private static final long serialVersionUID = 1L;
+//
+//		// 다시 그리는 paintComponent를 오버라이드
+//		@Override
+//		public void paintComponent(Graphics g) {
+//			super.paintComponent(g);
+//			g.drawImage(apple, 10, 10, w, h, this);
+//		}
+//	}
+	
+	    public static void printImage(String url) {
+	        // 이미지 아이콘 로드
+	        ImageIcon imageIcon = new ImageIcon(url);
+
+	        // 레이블 생성 및 이미지 아이콘 설정
+	        JLabel imageLabel = new JLabel(imageIcon);
+
+	        // 패널 생성 및 선호되는 크기 설정
+	        JPanel imagePanel = new JPanel();
+	        imagePanel.setPreferredSize(new Dimension(imageIcon.getIconWidth(), imageIcon.getIconHeight()));
+
+	        // 패널에 레이블 추가
+	        imagePanel.add(imageLabel);
+
+	        // 프레임 생성 및 설정
+	        JFrame frame = new JFrame();
+	        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	        frame.getContentPane().add(imagePanel);
+	        frame.pack();
+	        frame.setVisible(true);
+
+	        // 프레임을 창의 가장 앞으로 이동하고 포커스 요청
+	        frame.toFront();
+	        frame.requestFocus();
+	    }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
